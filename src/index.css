@@ -19,5 +19,10 @@ code {
 }*/
 
 .red{
-    color: #de2f2f;
+    font-size:3rem;
+    color: rgb(245, 0, 87);
+}
+
+.black-heart{
+    font-size: 3rem;
 }

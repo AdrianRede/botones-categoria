@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
+import { IconButton } from '@material-ui/core';
 
 //import images from '../../assets/images';
 
@@ -11,12 +12,20 @@ import Typography from '@material-ui/core/Typography';
 const CardCategory = (categoria) => {
     const {nombre, urlImage}= categoria;
    
-    const selected= true;
+    let selected= true;
     //Al dar click extraido el nombre de la categoria para despues pasarlo al state
-    const onclick = (e) => {
-        e.preventDefault();
+    const onclick = (categoria) => {
+
+        /*if(categoria.selected){
+            selected=true;
+        }else{
+            selected=false;
+        }*/
+
+        /* e.preventDefault();
         console.log(e.target);
-        console.log(e.target.value)
+        console.log(e.target.value) */
+        console.log(categoria)
         //console.log(e)
     };
 
@@ -51,6 +60,15 @@ const CardCategory = (categoria) => {
             <img class="card-img-top" src={urlImage} alt="Deportes" />
             <div class="card-img-overlay">
                 <p class="card-text bg-primary text-white font-weight-bold "> {nombre} </p>
+                <IconButton
+                    variant='contained'
+                    color='secondary'
+                    size='sm'
+                    onClick={()=>onclick(categoria)}
+                    value={nombre}
+                >
+                    { selected ?<i class="fas fa-heart red" value={nombre}></i> :  <i class="far fa-heart "> </i> }
+                </IconButton>
             </div>
            
             
