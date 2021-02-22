@@ -1,6 +1,6 @@
 import {
     OBTENER_CATEGORIAS,
-    CATEGORIA_ESTADO    
+    CATEGORIA_ESTADO,    
 }from '../../types/index';
 
 export default (state, action) => {
@@ -17,6 +17,8 @@ export default (state, action) => {
                 ...state,
 
             }
+
+        
     
         default:
             return state;

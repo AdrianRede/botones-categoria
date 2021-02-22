@@ -12,6 +12,7 @@ import CategoriasFavoritas from './components/categorias/CategoriasFavoritas'
 
 //context
 import CardState from './context/cards/cardState';
+import LearnState from './context/learn/learnState'
 
 
 
@@ -19,16 +20,19 @@ function App() {
   return (
     
     <CardState>
-        <Router>
-            <Switch>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/categories' component={ListaCategorias}/>
-                <Route exact path='/prefabricados/botonUI' component={BotonUI} />
-                <Route exact path='/prefabricados/Card' component = {Card4} />
-                <Route exact path='/prefabricados/learnState' component={Learn} />
-                <Route exact path= '/pages/categorias' component ={CategoriasFavoritas} />
-            </Switch>
-        </Router>
+        <LearnState>
+            <Router>
+                <Switch>
+                    <Route exact path='/' component={Home} />
+                    <Route exact path='/categories' component={ListaCategorias}/>
+                    <Route exact path='/prefabricados/botonUI' component={BotonUI} />
+                    <Route exact path='/prefabricados/Card' component = {Card4} />
+                    <Route exact path='/prefabricados/learnState' component={Learn} />
+                    <Route exact path= '/pages/categorias' component ={CategoriasFavoritas} />
+                </Switch>
+            </Router>
+
+        </LearnState>
     </CardState>
 
   );

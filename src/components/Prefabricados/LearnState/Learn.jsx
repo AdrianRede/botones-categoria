@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import IconButton from "@material-ui/core/IconButton";
 
 import ListLearn from "./ListLearn";
+import Contador from '../LeartContext/Contador'
 
 const ListaNames = [
     { nombreN: "Juan" },
@@ -84,6 +85,7 @@ const Learn = () => {
                 </div>
                 
                 <ListLearn />
+                <Contador />
             </div>
         </div>
     );
